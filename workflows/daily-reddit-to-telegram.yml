@@ -28,7 +28,7 @@ jobs:
       - name: Send a telegram message
         uses: appleboy/telegram-action@v0.1.0
         with:
-          to: ${{ secrets.TELEGRAM_TO }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
+          to: ${{ TELEGRAM_TO }}
+          token: ${{ TELEGRAM_TOKEN }}
           message: ${{fromJSON(steps.format.outputs.result).message}}
           format: html
